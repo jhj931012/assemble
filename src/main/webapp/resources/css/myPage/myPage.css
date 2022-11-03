@@ -1,0 +1,241 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+	outline: none;
+}
+.header-plus{
+	display: none;
+}
+.header-content{
+	display: none;
+}
+.header-content-bar{
+	display: none;
+}
+.all-myPage{
+	position: relative;
+	box-sizing: content-box;
+	flex-direction: row;
+	padding: 35px;
+	overflow: hidden;
+	background-color: #E0FFFF ;
+}
+.all-myPage .choice-page{
+	width: 20%;
+	float:left;
+	display: inline-block;
+	height: 700px;
+	position: fixed;
+	padding-top: 30px;
+	height: 450px;
+	border-radius: 15px;
+	width:220px;
+	margin-left: 50px;
+}
+.choice-title{
+	text-align: center;
+	height: 100px;
+	font-size: 35px;
+	line-height: 100px;
+}
+.choice-page ul{
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+}
+.choice-page ul li{
+	line-height: 45px;
+	font-weight: bold;
+}
+.choice-page button{
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	font-weight: bold;
+	font-size:15px;
+}
+.choice-page button:hover{
+	cursor: pointer;
+}
+.choice-page button:hover:before{
+	color: blue;
+}
+/* ----------------------------------------------- */
+.all-myPage .look-page{
+	width: 75%;
+	float:right;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	box-sizing: content-box;
+	height: 1100px;
+}
+.look-page-first{
+	background-color:#B0E0E6;
+	height: 100%;
+	width: 40%;
+	border-radius: 10px 0 0 10px;
+	padding: 50px;
+	font-size:13px;
+	color: black;
+}
+.look-page-second{
+	padding: 30px;
+	background-color:#AFEEEE;
+	width:60%;
+	border-radius:0 10px 10px 0;
+}
+.look-page-title{
+	display: flex;
+	margin-top: 20px;
+}
+.look-page-common{
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 20px;
+	color: black;
+}
+.Security:before{
+	content:"\f007";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+.Change-Password:before{
+	content:"\f023";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+.wishlist:before{
+	content:"\f02e";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+.View-post:before{
+	content:"\f03a";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+.login-history:before{
+	content:"\f1da";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+.Withdrawal:before{
+	content:"\f1f8";
+	font-family: 'fontawesome';
+	padding-right: 10px;
+}
+/* -------------------------------------- */
+.Security-title{
+	height: 350px;
+}
+.Security-title input{
+	height: 40px;
+	background-color:	#ADD8E6;
+	outline: none;
+	border: none;
+	padding-left: 20px;
+	border-radius: 10px;
+}
+.Security-title input:hover{
+	background-color:	#99CCFF;
+}
+.Security-content input::placeholder{
+	color: white;
+}
+.Security-Information{
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.Security-change{
+	display: inline-block;
+	float:right;
+}
+.Security-change input{
+	padding-left: 10px;
+	background-color: transparent;
+	border:1px solid #B0C4DE;
+	border-radius: 5px;
+	color:#B0C4DE;
+	height: 30px;
+	font-weight: bold;
+}
+/* -------------------------------------- */
+.Change-Password-title{
+	height: 350px;
+}
+.Password-Information{
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.Change-Password-title input{
+	height: 40px;
+	background-color:	#ADD8E6;
+	outline: none;
+	border: none;
+	padding-left: 20px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.Change-Password-title input:hover{
+	background-color:	#99CCFF;
+}
+.Change-Password-title input::placeholder{
+	color: white;
+}
+.password-change{
+	display: inline-block;
+	float:right;
+}
+.password-change input{
+	padding-left: 10px;
+	background-color: transparent;
+	border:1px solid #B0C4DE;
+	border-radius: 5px;
+	color:#B0C4DE;
+	height: 30px;
+	font-weight: bold;
+}
+/* -------------------------------------- */
+.login-history-title{
+	height: 160px;
+}
+.login-history-content{
+	
+}
+/* -------------------------------------- */
+
+.Withdrawal-title{
+	height: 130px;
+	
+}
+.Withdrawal-content{
+	display: inline-block;
+}
+.Withdrawal-content #Withdrawal{
+	width:445pt;
+	height: 40px;
+	margin-top: 15px;
+	border-radius: 15px;
+	outline: none;
+	border:none;
+	background-color:	#ADD8E6;
+	color: white;
+	font-size: 15px;
+}
+.Withdrawal-content #Withdrawal:hover{
+	background-color: #99CCFF;
+}
+
+
+
+/* -------------------------------------- */
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:aop="http://www.springframework.org/schema/aop"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+   xmlns:tx="http://www.springframework.org/schema/tx"
+   xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+      http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+      http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- 스프링 AOP 자동 프록시 설정 -->
+	<aop:aspectj-autoproxy />
+	
+	<!-- root-context.xml파일의 역할은 서비스를 추가해서 스프링  aop를 통한 트랜잭션 적용, 모델 dao설정,
+	mybatis설정,데이터 베이스 연결 정보가 들어간다. -->
+	
+	<!-- 스프링 API를 통한 JDBC연결 즉 오라클 연결 -->
+	<bean id="dataSource"
+	 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	 <!-- bean단위가 자바 클래스 단위이고 id명은 객체명에 해당한다. -->
+	  <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+	  <!-- driverClassName 멤버변수에 value속성값을 저장 -->
+	  <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+	  <!-- 오라클 접속주소 -->
+	  <property name="username" value="assemble" /> <!-- 오라클 사용자 -->
+	  <property name="password" value="assemble" /> <!-- 사용자 비번 -->
+	 </bean>
+		
+	<!-- 스프링 jdbc와 mybatis연결,데이터 저장빈 클래스 객체 별칭을 관리하는 mybatis-config.xml파일을
+	기입한다. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	  <property name="dataSource" ref="dataSource" />
+	  <!-- setter()메서드를 통한 의존성 주입(DI)을 한다음 ref속성값 dataSource가 빈아이디 객체명을 참조해서
+	  오라클연결한다.-->
+	  <property name="configLocation" value="classpath:/mybatis-config.xml" />
+	  <!-- classpath경로는 was서버에 의해서 변경된 실제 프로젝트의 WEB-INF/classes 경로를 가리킨다.
+	  해당 개발툴의 가상경로는 src/main/resources이다. -->
+	  
+	  <property name="mapperLocations" value="classpath:/com/assemble/mappers/*/*.xml" />
+	  <!-- 쿼리문을 담을 mybatis 매퍼태그 xml파일이 들어가는 경로이다. -->  
+	</bean>
+		
+	<!-- 트랜잭션 매니저(관리자) 설정 -->
+	<bean id="transactionManager"
+	 class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	  <property name="dataSource" ref="dataSource" />
+	  <!-- setter 메서드를 통한 의존성 주입. ref 빈아이디 dataSource를 호출 -->  
+    </bean>	
+    <tx:annotation-driven /> <!-- 트랜잭션 설정 애너테이션. -->
+		
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate"
+	destroy-method="clearCache"> <!-- destroy-method="clearCache"는 임시메모리(캐쉬)를 비워서 
+	DB연결을 해제. -->
+	  <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+	  <!-- 생성자를 통한 의존성 주입(DI) -->
+	</bean>
+		
+    <context:component-scan base-package="com.assemble.dao" />
+    <!-- 모델 DAOImpl의 @Repository로 설정된 부분을 스프링에 오토 스캔(자동으로 찾음)하여 등록하게 함. -->
+    		
+    <context:component-scan base-package="com.assemble.service" />
+    <!--  서비스 추가이유: 1. 고객의 추가요구 사항을 반영, 2.스프링의 컨트롤러와 모델 DAO를 연결하는 중간 매개체 역
+    할 , 3.스프링의  AOP를 통한 트랜잭션을 처리함으로써 데이터 불일치 현상을 제거=>사이트의 신뢰도 향상        
+     -->		
+     
+    <aop:config /> <!-- aop xml방식 설정  -->
+</beans>
+
+
+
+

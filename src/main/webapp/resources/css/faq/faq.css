@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+.all-freeboard {
+	position: relative;
+	box-sizing: content-box;
+	flex-direction: row;
+	padding-top: 35px;
+	overflow: hidden;
+	background-color: #f0ffff ;
+	width:100%;
+}
+
+.freeboard-table {
+	width:75%;
+	border-top: 1px solid #444444; /*게시판 목록 위에 줄*/
+	border-collapse: collapse;
+	margin-left: 13%;
+	position: relative;
+	
+}
+.board-title-free h1{
+	margin-left: 42%;
+	margin-bottom: 22px;
+}
+
+.freeboard-table tr {
+    padding: 10px;
+}
+
+.freeboard-table tr th{
+	border-bottom : 1px solid #d3d3d3;
+	border-collapse : collapse;
+	height: 40px;
+}
+
+.freeboard-table tr td{
+	border-bottom : 1px solid #d3d3d3;
+	height: 35px;
+}
+
+.board-list{
+	margin-left: 32%;
+	padding-top: 2px;
+}
+.board-list li{
+	float:left;
+	padding-right: 40px;
+	list-style: none;
+}
+.board-list li a{
+	color: #444444;
+	font-weight: bold;
+}
+.board-list li a:hover{
+	color: red;
+}
+/*QnA*/
+.board-title-free2 h1{
+	margin-left: 48%;
+	margin-bottom: 22px;
+	padding-top: 5%;
+}
+.freeboard-table2 tr th{
+	border-bottom : 1px solid #d3d3d3;
+	border-collapse : collapse;
+	height: 40px;
+}
+.freeboard-table2 tr td{
+	border-bottom : 1px solid #d3d3d3;
+	height: 35px;
+}
+.freeboard-table2 {
+	width:75%;
+	border-top: 1px solid #444444; /*게시판 목록 위에 줄*/
+	border-collapse: collapse;
+	margin-left: 13%;
+	position: relative;
+	
+}
+
+/*게시판 제목*/
+.title-no{
+	width:5%;
+}
+.title-title{
+	width:65%;
+}
+.title-date{
+	width:10%;
+}
+
+/*게시판 목록 별 내용*/
+.cont-num{
+	text-align: center;
+}
+.cont-category{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+.cont-date{
+	text-align: center;
+}
+.cont-title{
+	text-align: center;
+}
+.cont-title a{
+	color: black;
+}
+.cont-title a:hover{
+	color: red;
+}
+
+.writebtn{
+	float: right;
+	margin-right: 12%;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.btn{
+	font-size: 15px;
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-family: sans-serif;
+	transition: all 0.4;
+}
+
+.btn:focus{
+	outline: none;
+}
+
+.btn:hover{
+	background-color: black;
+	color: white;
+}
+
+.text-box{
+	border: 1px solid #d3d3d3;
+	width: 75%;
+	margin-left: 13%;
+	height: 200px;
+	margin-bottom: 20px;
+	margin-top: 3%;
+	padding-left: 4%;
+	padding-top: 1%;
+	font-size: 15px;
+}
+
+/*사이드메뉴*/
+.side-menu-table{
+	width: 100px;
+	font-size: 10px;
+	border: 1px solid #444444;
+}
+
+#select{
+	background:#f0ffff;
+	font-size: 15px;
+	font-weight:bold;
+	border-width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

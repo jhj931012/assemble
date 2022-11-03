@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.assemble.vo.AdminVO" alias="admin"/>
+		<typeAlias type="com.assemble.vo.BoardVO" alias="board"/>
+		<typeAlias type="com.assemble.vo.ReplyVO" alias="reply"/>
+		<typeAlias type="com.assemble.vo.UsersVO" alias="users"/>
+		<typeAlias type="com.assemble.vo.WebtoonVO" alias="webtoon"/>
+		<typeAlias type="com.assemble.vo.SecurityVO" alias="security"/>
+		<typeAlias type="com.assemble.vo.AuthVO" alias="authvo"/>
+		<typeAlias type="com.assemble.vo.ReviewVO" alias="review"/>
+		<typeAlias type="com.assemble.vo.ThemaVO" alias="thema"/>
+		<typeAlias type="com.assemble.vo.WishVO" alias="wish"/>
+	</typeAliases>
+</configuration>

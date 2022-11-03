@@ -1,0 +1,15 @@
+1. tag.jsp, tag.css 수정
+페이징, 검색 기능 추가
+리뷰 파트 textarea, submit, select버튼 추가
+popup창 css 수정했음
+
+2. 새로 생성한 파일
+reviewcontroller
+reviewservice
+reviewserviceImpl
+reviewDAO
+reviewDAOImpl
+reveiw.xml
+
+3.mybatis reviewVO추가
+

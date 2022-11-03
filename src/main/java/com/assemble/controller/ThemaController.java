@@ -1,0 +1,67 @@
+package com.assemble.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.assemble.service.ThemaService;
+import com.assemble.vo.ThemaVO;
+import com.assemble.vo.WebtoonVO;
+
+@Controller
+public class ThemaController {
+
+	@Autowired
+	private ThemaService themaService;
+
+	@RequestMapping(value = "/thema", method = RequestMethod.GET)
+	public String thema() {
+		return "thema/thema";
+	}
+
+	@RequestMapping(value="/thema_content", method=RequestMethod.GET)
+	public String thema_content (Model contM, HttpServletRequest request, ThemaVO tb){
+		
+		List<ThemaVO> conlist = this.themaService.getWebtoonList1(tb);
+		
+
+		contM.addAttribute("conlist", conlist);
+
+
+		return "thema/thema_content";
+	}
+	
+	@RequestMapping(value="/thema_insert", method=RequestMethod.GET)
+	public String thema_insert (Model thinsertM, HttpServletRequest request, WebtoonVO wb) {
+		
+		List<WebtoonVO> thlist = this.themaService.getWebtoonList(wb);
+		
+		thinsertM.addAttribute("thlist", thlist);
+
+		return "insert/thema_insert";
+	}
+	
+	@RequestMapping(value="/thema_insert_ok", method=RequestMethod.POST)
+	public ModelAndView thema_insert_ok (ThemaVO tm, RedirectAttributes rttr) {
+		this.themaService.insertThema(tm);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return new ModelAndView("redirect:/thema_content");
+	}
+	
+	@RequestMapping("/thema_del")
+	public String thema_del(String thema_title, RedirectAttributes rttr) {
+		this.themaService.deleteThema(thema_title);
+		rttr.addFlashAttribute("msg","SUCCESS");
+		return "redirect:/thema_content";
+	}
+	
+}

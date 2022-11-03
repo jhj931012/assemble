@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+.all-page{
+	position:relative;
+	width:100%;
+	height:210%;
+}
+
+img{
+	padding-top:10px;
+	margin-right:15px;
+}
+
+
+.join-container{
+	position : relative;
+	width:700px;
+	height:80%;
+	margin:80px;
+	margin-left:320px;
+	padding:30px;
+	background-color: #ADD8E6;
+	border-radius: 50px;
+	
+	display:flex;
+	flex-direction:row;
+}
+
+
+.join-container-content{
+	positon : relative;
+	height:100%;
+	width:100%;
+	
+}
+
+.content-box{
+	position:relative;
+	width:100%;
+	padding: 20px;
+	display:flex;
+	flex-direction:row;
+}
+
+.join-text{
+	margin-top:50px;
+	margin-bottom:-20px;
+	margin-left:20px;
+	padding-left:500px;
+	font-size:30px;
+}
+
+.join-container input[type=text]{
+	margin:10px;
+	margin-top:5px;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 5px;
+	border:none;
+}
+
+.join-container input[type=text]:hover{
+	background-color:	#99CCFF;
+}
+
+.join-container input[type=button]{
+	margin-top:5px;
+	margin-left:20px;
+	width:100px;
+	height:30px;
+	color:white;
+	background-color:#99CCFF;
+	border-radius:5px;
+	border:solid 1px white;
+}
+
+.join-container input[type=button]:hover{
+	background-color:blue;
+}
+
+.join-container input[type=password]{
+	margin-left:10px;
+	margin-top:5px;
+	height: 30px;
+	border: solid 1px black;
+	padding-left: 10px;
+	border-radius: 5px;
+	border:none;
+}
+
+.join-container input[type=password]:hover{
+	background-color:	#99CCFF;
+}
+
+.join-container input[type=date]{
+	margin-left:10px;
+}
+
+.title{
+	margin-top:3px;
+	position:relative;
+	width:150px;
+	padding: 5px;
+	color:white;
+}
+
+/*------------ btn --------------*/
+
+.sign{
+	margin:5px;
+	margin-top:7px;
+}
+
+.birthday{
+	margin-top:7px;
+	margin-right:5px;
+	margin-left:-4px;
+}
+
+.joinBtn{
+	position:relative;
+	margin-top:70px;
+	width:100%;
+	padding: 20px;
+	text-align:center;
+}
+
+
+.joinBtn input{
+	margin-right:20px;
+	margin-left:20px;
+	width:40%;
+	height:50px;
+	font-size:20px;
+	color:white;
+	border-radius:5px;
+	background-color:#99CCFF;
+	border:solid 1px white;
+}
+
+.joinBtn input:hover{
+	margin-right:20px;
+	margin-left:20px;
+	width:40%;
+	height:50px;
+	border-radius:5px;
+	background-color:blue;
+}
+
+select {
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:3px;
+	height:32px;
+	border-radius:5px;
+	border:none;
+}
+
+.content-box span{
+	margin-left:-70px;
+	color:white;
+}
+
+.content-box input[type=radio]{
+	background-color:#99CCFF;
+	vertical-align: middle;
+	appearance: none;
+	border:solid 1px white;
+	border-radius: 5px;
+	width: 8.25em;
+	height: 2.25em;
+	cursor: pointer;
+}
+
+.radio-box{
+	margin-left:10px;
+	display:flex; 
+	align-items:center
+}
+
+.radio1{
+	margin-right:50px;
+}
+
+.content-box input[type=radio]:checked{
+	background-color:blue;
+}
+
+.content-box input[type=date]{
+	margin-top:5px;
+	margin-left:20px;
+	width:100px;
+	height:30px;
+	border-radius:5px;
+	border:none;
+}
+
+#idcheck{
+	position:absolute;
+	top:9%;
+	left:7%;
+}
