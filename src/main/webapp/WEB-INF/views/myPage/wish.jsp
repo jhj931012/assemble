@@ -11,21 +11,31 @@
 <%@ include file="../include/header.jsp"%>
 
 <div class="listbox">
+
+<h1></h1><h2>님의 찜목록</h2>
+
+
    <form name="t" method="get" action="wish">
 
-      
-  
+
+
       <div class="tag-item">
          <c:forEach var="ws" items="${w_list}">
-               <div class="item" id="item">
-                  <div class="web-img">
-                     <img src="/resources/upload/${ws.webtoon_thumbnail}"
-                        class="thumbnail" style="width: 100%; height: 100%;">
-                  </div>
-                  <div class="web-title" id="web-title">
-                     <span><b><c:out value="${ws.webtoon_title}" /></b></span>
-                  </div>
+            <div class="item" id="item">
+               <div class="web-img">
+                  <img src="/resources/upload/<c:out value="${ws.wish_title}" />.jpg"
+                     class="thumbnail" style="width: 100%; height: 100%;">
                </div>
-            </a>
+               <div class="web-title" id="web-title">
+                  <span><b><c:out value="${ws.wish_title}" /></b></span>
+               </div>
+            </div>
+            <div class="wish_btn">
+               <input type="button" value="삭제"
+                  onclick="location='wish_del?wish_title=${ws.wish_title}';" />
+            </div>
          </c:forEach>
       </div>
+
+   </form>
+</div>

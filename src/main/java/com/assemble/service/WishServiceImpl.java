@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.assemble.dao.WishDAO;
-import com.assemble.vo.WebtoonVO;
 import com.assemble.vo.WishVO;
 
 @Service
@@ -26,7 +25,12 @@ public class WishServiceImpl implements WishService {
 	}
 
 	@Override
-	public List<WebtoonVO> getWishContent(WebtoonVO wb) {
-		return this.wishDAO.getWishContent(wb);
+	public void deleteWish(String wish_title) {
+		this.wishDAO.deleteWish(wish_title);
 	}
+
+	
+
+	
+
 }

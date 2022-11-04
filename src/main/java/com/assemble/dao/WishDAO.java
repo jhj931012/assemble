@@ -2,7 +2,6 @@ package com.assemble.dao;
 
 import java.util.List;
 
-import com.assemble.vo.WebtoonVO;
 import com.assemble.vo.WishVO;
 
 public interface WishDAO {
@@ -11,6 +10,8 @@ public interface WishDAO {
 
 	void wish_ok(WishVO wo);
 
-	List<WebtoonVO> getWishContent(WebtoonVO wb);
+	void deleteWish(String wish_title);
+
+	
 
 }

@@ -34,7 +34,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 			가로챈 다음 access속성에 접근권한 범위를 지정한다. permitAll은 모든 사용자 접근 권한을 허용한다. -->
 
 		<security:intercept-url
-			pattern="/sample/member" access="hasRole('ROLE_MEMBER')" />
+			pattern="/member" access="hasRole('ROLE_MEMBER')" />
 		<!-- ROLE_MEMBER는 로그인한 일반회원만 접근 가능 -->
 
 		<security:intercept-url pattern="/admin/*"

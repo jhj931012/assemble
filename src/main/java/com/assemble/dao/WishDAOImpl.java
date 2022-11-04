@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.assemble.vo.WebtoonVO;
 import com.assemble.vo.WishVO;
 
 @Repository
@@ -26,7 +25,10 @@ public class WishDAOImpl implements WishDAO {
 	}
 
 	@Override
-	public List<WebtoonVO> getWishContent(WebtoonVO wb) {
-		return this.sqlSession.selectList("wc_in", wb);
+	public void deleteWish(String wish_title) {
+		this.sqlSession.delete("w_del", wish_title);
 	}
+
+	
+
 }

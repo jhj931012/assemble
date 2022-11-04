@@ -4,6 +4,7 @@ public class WishVO {
 
 	private String wish_title;
 	private String wish_id;
+	private String wish_thumbnail;
 	
 	private WebtoonVO webtoonVo;
 	private UsersVO userVo;
@@ -31,6 +32,12 @@ public class WishVO {
 	}
 	public void setUserVo(UsersVO userVo) {
 		this.userVo = userVo;
+	}
+	public String getWish_thumbnail() {
+		return wish_thumbnail;
+	}
+	public void setWish_thumbnail(String wish_whumbnail) {
+		this.wish_thumbnail = wish_whumbnail;
 	}
 	
 	

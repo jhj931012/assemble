@@ -8,7 +8,7 @@
 		<ul>
 			<li><button class="Security" type="button" id="box1">개인정보</button></li>
 			<li><button class="Change-Password" type="button" id="box2">비밀번호 변경</button></li>
-			<li><button class="wishlist" type="button" onclick="location='#';">찜 목록</button></li>
+			<li><button class="wishlist" type="button" onclick="location.href='/wish';">찜 목록</button></li>
 			<li><button class="View-post" type="button" onclick="location='#';">작성글 관리</button></li>
 			<li><button class="login-history" type="button" id="box3">로그인 이력</button></li>
 			<li><button class="Withdrawal" type="button" id="box4">회원 탈퇴</button></li>

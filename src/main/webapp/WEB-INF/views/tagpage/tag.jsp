@@ -196,9 +196,10 @@ function closeLayer(i) {
 				<div class="pop-text">
 					<div class="pop-title" id="pop-title">
 						<h3>${pop.webtoon_title}</h3>
-						<form action="/wish_ok" method="POST"
-							onclick="this.submit();">
-							<input type="hidden" name="title" value="${pop.webtoon_title}" />♥
+						<form action="/wish_ok" method="POST">
+							<input type="hidden" name="title" value="${pop.webtoon_title}" />
+							<input type="hidden" name="thumbnail" value="${pop.webtoon_thumbnail}" />
+							<input type="submit" name="submit" value="♥" />
 						</form>
 					</div>
 					<div class="pop-author">
@@ -214,9 +215,7 @@ function closeLayer(i) {
 					<div class="pop-cont">${pop.webtoon_cont}</div>
 				</div>
 				<div class="popup-btn">
-					<a id="close-btn"
-						onclick="closeLayer(<c:out value="${pop.webtoon_no}"/>)"><i
-						class="fa-solid fa-rectangle-xmark"></i></a>
+					<a id="close-btn" onclick="closeLayer(<c:out value="${pop.webtoon_no}"/>)"><i class="fa-solid fa-rectangle-xmark"></i></a>
 				</div>
 				<div class="total">
 					<div class="slider-wrap">
