@@ -23,7 +23,11 @@ ALTER TABLE users DROP COLUMN email_domain;
 
 select * from users;
 
-delete from users;
+delete from users where user_no = 9;
+select users from 'zxzxzx' where user_id = 'USERS_AUTH_USERID_FK'
+select * from tabs
+select * from users_auth
+delete from users
 
 create sequence users_seq
 start with 1
@@ -32,18 +36,18 @@ nocache;
 
 select users_seq.nextval from dual;
 
-create table users_auth(-- ê¶Œí•œ ë¶€ì—¬ í…Œì´ë¸”
-user_id varchar2(50) not null -- ì•„ì´ë””
-, auth varchar2(50) not null -- ê¶Œí•œë¶€ì—¬
+create table users_auth(-- ê¶Œí•œ ë¶??—¬ ?…Œ?´ë¸?
+user_id varchar2(50) not null -- ?•„?´?””
+, auth varchar2(50) not null -- ê¶Œí•œë¶??—¬
 , constraint users_auth_userid_fk foreign key(user_id) references users(user_id) 
--- ì™¸ë˜í‚¤ë¡œ ì„¤ì •ë˜ì–´ì„œ tbl_member userid ì»¬ëŸ¼ ë ˆì½”ë“œ ì•„ì´ë””ê°’ë§Œ ì €ì¥ë¨.
+-- ?™¸?˜?‚¤ë¡? ?„¤? •?˜?–´?„œ tbl_member userid ì»¬ëŸ¼ ? ˆì½”ë“œ ?•„?´?””ê°’ë§Œ ???¥?¨.
 );
 insert into users(user_no,user_id,user_pwd,user_name,user_gender,user_nickname,user_date,user_state)
-values(users_seq.nextval,'user12','user00','í™ê¸¸ë™',1,'í™ê¸¸ë™',sysdate,1);
+values(users_seq.nextval,'user12','user00','?™ê¸¸ë™',1,'?™ê¸¸ë™',sysdate,1);
+
 
 insert into users_auth(user_id,auth) values('user00','ROLE_ADMIN');
-delete from users_auth;
-select * from users_auth;
+
 
 
 commit;
@@ -55,15 +59,14 @@ update users_auth set auth = 'ROLE_ADMIN' where user_id = 'zxzxzx';
 select mem.user_id,user_no, user_pwd,user_name,user_gender,user_nickname,user_date, auth FROM users mem LEFT OUTER JOIN users_auth auth on mem.user_id = auth.user_id; 
 
 create table persistent_logins(
-    username varchar2(64) not null -- íšŒì›ì•„ì´ë””
-    ,series varchar2(64) primary key -- íšŒì›ë¹„ë°€ë²ˆí˜¸
-    ,token varchar2(64) not null -- í† í° ì •ë³´
-    ,last_used timestamp not null -- ë¡œê·¸ì¸ í•œ ë‚ ì§œ ì‹œê°„
+    username varchar2(64) not null -- ?šŒ?›?•„?´?””
+    ,series varchar2(64) primary key -- ?šŒ?›ë¹„ë?ë²ˆí˜¸
+    ,token varchar2(64) not null -- ?† ?° ? •ë³?
+    ,last_used timestamp not null -- ë¡œê·¸?¸ ?•œ ?‚ ì§? ?‹œê°?
 );
 
 ALTER TABLE users DROP COLUMN user_state;
 ALTER TABLE users DROP COLUMN user_delcont;
 ALTER TABLE users DROP COLUMN user_deldate;
 commit;
-
 

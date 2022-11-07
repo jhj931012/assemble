@@ -23,20 +23,38 @@
 			</div>
 		</a>
 
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르2</div>
-		</div>
+		<a id="themabox-btn" href="/thema_content2">
+			<div class="thema-index">
+				<div class="thema-items1">
+					<div class="item">
+						<img class="img-class" src="../images/Thumbnail/테마_테스트1.jpg">
+					</div>
+				</div>
+				<div class="item-text">유저들이 찜을 많이 한 웹툰</div>
+			</div>
+		</a>
 
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르3</div>
-		</div>
+		<a id="themabox-btn" href="/thema_content3">
+			<div class="thema-index">
+				<div class="thema-items1">
+					<div class="item">
+						<img class="img-class" src="../images/Thumbnail/테마_테스트1.jpg">
+					</div>
+				</div>
+				<div class="item-text">남성 유저들이 많이 찜한 웹툰</div>
+			</div>
+		</a>
 
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르3</div>
-		</div>
+		<a id="themabox-btn" href="/thema_content4">
+			<div class="thema-index">
+				<div class="thema-items1">
+					<div class="item">
+						<img class="img-class" src="../images/Thumbnail/테마_테스트1.jpg">
+					</div>
+				</div>
+				<div class="item-text">여성 유저들이 많이 찜한 웹툰</div>
+			</div>
+		</a>
 
 		<div class="thema-text">
 			<h1>테마2222222</h1>

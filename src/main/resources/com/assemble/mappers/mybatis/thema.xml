@@ -44,4 +44,6 @@
 		delete from thema where thema_title=#{thema_title} 
 	</delete>
 	
+	
+	
 </mapper>

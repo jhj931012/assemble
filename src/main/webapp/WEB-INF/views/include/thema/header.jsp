@@ -62,7 +62,7 @@
 				</h2>
 			<div class="selector-menu">
 					<a href="/tagpage_tag"><i class="fa-solid fa-play"></i><span>태그검색</span></a> 
-					<a href="#"><i class="fa-solid fa-play"></i><span>테마검색</span></a> 
+					<a href="/thema"><i class="fa-solid fa-play"></i><span>테마검색</span></a> 
 					<a href="#"><i class="fa-solid fa-play"></i><span>FAQ</span></a> 
 					<a href="/freeboard_list"><i class="fa-solid fa-play"></i><span>사사게</span></a>
 				</div>

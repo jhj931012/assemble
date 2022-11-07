@@ -15,4 +15,4 @@ select admin_seq.nextval from dual;
 select * from admin
 commit;
 
-update users_auth set auth = 'ROLE_ADMIN' where user_id = 'jhjhj';
+update users_auth set auth = 'ROLE_ADMIN' where user_id = 'admin1';

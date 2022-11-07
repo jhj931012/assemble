@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.assemble.vo.ThemaVO;
 import com.assemble.vo.WebtoonVO;
+import com.assemble.vo.WishVO;
 
 @Repository
 public class ThemaDAOImpl implements ThemaDAO {
@@ -33,6 +34,21 @@ public class ThemaDAOImpl implements ThemaDAO {
 	@Override
 	public Object deleteThema(String thema_title) {
 		return this.sqlSession.delete("th_del", thema_title);
+	}
+
+	@Override
+	public List<WishVO> getWishList(WishVO wsb) {
+		return this.sqlSession.selectList("th2_in", wsb);
+	}
+
+	@Override
+	public List<WishVO> getWishList_male(WishVO wsb) {
+		return this.sqlSession.selectList("th3_in", wsb);
+	}
+
+	@Override
+	public List<WishVO> getWishList_female(WishVO wsb) {
+		return this.sqlSession.selectList("th4_in", wsb);
 	}
 
 	

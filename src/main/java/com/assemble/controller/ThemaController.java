@@ -16,6 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.assemble.service.ThemaService;
 import com.assemble.vo.ThemaVO;
 import com.assemble.vo.WebtoonVO;
+import com.assemble.vo.WishVO;
 
 @Controller
 public class ThemaController {
@@ -38,6 +39,42 @@ public class ThemaController {
 
 
 		return "thema/thema_content";
+	}
+	
+	@RequestMapping(value="/thema_content2", method=RequestMethod.GET)
+	public String thema_content2 (Model contM, HttpServletRequest request, WishVO wsb){
+		
+		List<WishVO> conlist2 = this.themaService.getWishList(wsb);
+		
+
+		contM.addAttribute("conlist2", conlist2);
+
+
+		return "thema/thema_content2";
+	}
+	
+	@RequestMapping(value="/thema_content3", method=RequestMethod.GET)
+	public String thema_content3 (Model contM, HttpServletRequest request, WishVO wsb){
+		
+		List<WishVO> conlist3 = this.themaService.getWishList_male(wsb);
+		
+
+		contM.addAttribute("conlist3", conlist3);
+
+
+		return "thema/thema_content3";
+	}
+	
+	@RequestMapping(value="/thema_content4", method=RequestMethod.GET)
+	public String thema_content4 (Model contM, HttpServletRequest request, WishVO wsb){
+		
+		List<WishVO> conlist4 = this.themaService.getWishList_female(wsb);
+		
+
+		contM.addAttribute("conlist4", conlist4);
+
+
+		return "thema/thema_content4";
 	}
 	
 	@RequestMapping(value="/thema_insert", method=RequestMethod.GET)

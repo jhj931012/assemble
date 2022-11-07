@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.assemble.dao.ThemaDAO;
 import com.assemble.vo.ThemaVO;
 import com.assemble.vo.WebtoonVO;
+import com.assemble.vo.WishVO;
 
 @Service
 public class ThemaServiceImpl implements ThemaService {
@@ -36,6 +37,24 @@ public class ThemaServiceImpl implements ThemaService {
 	@Override
 	public void deleteThema(String thema_title) {
 		this.themaDao.deleteThema(thema_title);
+	}
+
+
+	@Override
+	public List<WishVO> getWishList(WishVO wsb) {
+		return this.themaDao.getWishList(wsb);
+	}
+
+
+	@Override
+	public List<WishVO> getWishList_male(WishVO wsb) {
+		return this.themaDao.getWishList_male(wsb);
+	}
+
+
+	@Override
+	public List<WishVO> getWishList_female(WishVO wsb) {
+		return this.themaDao.getWishList_female(wsb);
 	}
 
 }
