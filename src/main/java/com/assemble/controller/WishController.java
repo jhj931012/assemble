@@ -36,6 +36,7 @@ public class WishController {
       List<WishVO> w_list = this.wishService.getWish(wl);
 
       contM.addAttribute("w_list", w_list);
+      contM.addAttribute("wishmsg", "찜목록이 없습니다.");
 
       return "myPage/wish";
    }

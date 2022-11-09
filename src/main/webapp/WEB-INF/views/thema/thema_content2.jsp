@@ -48,12 +48,12 @@ var num=1;
 
 		<div class="content-box">
 			<div class="content-img">
-				<a class="content-a"><img
+				<a class="content-a" href="/content?webtoon_thumbnail=${themacon2.webtoonVo.webtoon_thumbnail}"><img
 					class="image" src="/resources/upload/${themacon2.webtoonVo.webtoon_thumbnail}"></a>
 				<div class="text-hover" id="double-hover">웹툰 맛보기</div>
 			</div>
 			<div class="content-text">
-				<h2>${themacon2.wish_title}</h2>
+				<a href="/content?webtoon_thumbnail=${themacon2.webtoonVo.webtoon_thumbnail}"><h2>${themacon2.wish_title}</h2></a>
 				<br />
 				<div class="tag-box">
 

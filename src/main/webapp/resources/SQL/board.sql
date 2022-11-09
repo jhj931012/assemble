@@ -17,8 +17,10 @@ commit;
 select * from board;
 
 select board_seq.nextval from dual;
-insert into board (board_no,board_title,board_cont,board_type,board_image,board_hit,board_date) values(board_seq.nextval,'ì œëª©','ë‚´ìš©',3,'ì¸ìƒì¡´ë§_1.jpg',2,sysdate);
+insert into board (board_no,board_title,board_cont,board_type,board_image,board_hit,board_date) values(board_seq.nextval,'? œëª?','?‚´?š©',3,'?¸?ƒì¡´ë§_1.jpg',2,sysdate);
 commit;
 select *from board;
 alter table board add board_writer varchar(38);
 alter table board modify board_hit default 0;
+
+select * from webtoon where webtoon_thumbnail = '°¡¿ì½º ÀüÀÚ.jpg'

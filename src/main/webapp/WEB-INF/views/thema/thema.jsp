@@ -56,54 +56,6 @@
 			</div>
 		</a>
 
-		<div class="thema-text">
-			<h1>테마2222222</h1>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르4</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르5</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르6</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르6</div>
-		</div>
-
-		<div class="thema-text">
-			<h1>테마3333</h1>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르7</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르8</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르9</div>
-		</div>
-
-		<div class="thema-index">
-			<div class="thema-items1"></div>
-			<div class="item-text">장르9</div>
-		</div>
-
 	</div>
 </div>
 <%@include file="../include/footer.jsp"%>

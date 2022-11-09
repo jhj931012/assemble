@@ -18,3 +18,4 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.assemble.vo.WishVO" alias="wish"/>
 	</typeAliases>
 </configuration>
+

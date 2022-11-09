@@ -20,5 +20,10 @@ public interface FreeBoardDAO {
 
 	void delFreeBoard(int board_no);
 
+	void updateReplyCnt(int board_no, int count);
+
+	/*아래부터 검색관련*/
+	int getTotalCount(BoardVO b);
+
 
 }

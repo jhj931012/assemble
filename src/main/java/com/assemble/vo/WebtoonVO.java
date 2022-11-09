@@ -18,7 +18,7 @@ public class WebtoonVO {
 	private String webtoon_image3;
 	private String webtoon_age;
 	
-	
+
 	// 페이지 관련변수
 	private int startrow; // 시작행 번호
 	private int endrow; // 끝행번호

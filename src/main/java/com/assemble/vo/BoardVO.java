@@ -10,22 +10,15 @@ public class BoardVO {
 	private int board_hit;
 	private String board_date;
 	private int board_replycnt;
-	private int board_category;
-	
-	
-	private String find_category;
-	
-	
-	public String getFind_category() {
-		return find_category;
-	}
-	public void setFind_category(String find_category) {
-		this.find_category = find_category;
-	}
+	private String board_category;
 	
 	// 페이징 관련변수
 	private int startrow;
 	private int endrow;
+	
+	// 검색결과와 검색어
+	private String find_field; // 검색필드
+	private String find_name; // 검색어
 	
 	public int getStartrow() {
 		return startrow;
@@ -88,11 +81,11 @@ public class BoardVO {
 	public void setBoard_replycnt(int board_replycnt) {
 		this.board_replycnt = board_replycnt;
 	}
-	public int getBoard_category() {
+	public String getBoard_category() {
 		return board_category;
 	}
-	public void setBoard_category(int category) {
-		this.board_category = category;
+	public void setBoard_category(String board_category) {
+		this.board_category = board_category;
 	}
 	public String getBoard_writer() {
 		return board_writer;
@@ -100,6 +93,19 @@ public class BoardVO {
 	public void setBoard_writer(String board_writer) {
 		this.board_writer = board_writer;
 	}
+	public String getFind_field() {
+		return find_field;
+	}
+	public void setFind_field(String find_field) {
+		this.find_field = find_field;
+	}
+	public String getFind_name() {
+		return find_name;
+	}
+	public void setFind_name(String find_name) {
+		this.find_name = find_name;
+	}
+	
 	
 	
 	
