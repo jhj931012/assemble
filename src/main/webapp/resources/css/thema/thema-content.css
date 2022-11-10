@@ -5,6 +5,10 @@ a{
 	color: inherit;
 }
 
+.wish-msg{
+	font-size:30px;
+}
+
 .wrap{
 	width:100%;
 	height:300%;
@@ -198,5 +202,5 @@ a{
 	position:absolute;
 	float:right;
 	right:0;
-	bottom:-80px;
+	bottom:-60px;
 }

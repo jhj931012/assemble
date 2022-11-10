@@ -38,10 +38,16 @@ var num=1;
 
 	<div class="thema-title">
 		<h1>ASSEMBLE이 추천하는 웹툰</h1>
-		<h3>내용</h3>
+		<br/>
+		<h4>ASSEMBLE개발자들이 추천하는 웹툰입니다.</h4>
 	</div>
 
 	<div class="content-page">
+	
+	<c:if test="${empty conlist}">
+
+               <span class="wish-msg"><c:out value="${contmsg}" /></span>
+  </c:if>
 	
 
 <c:forEach var="themacon" items="${conlist}" varStatus="status">
@@ -72,7 +78,9 @@ var num=1;
 						${themacon.webtoonVo.webtoon_cont}
 					</p>
 					<br/>
-					<p>${themacon.thema_cont}</p>
+					<h3>개발자 한줄평</h3>
+					<br/>
+					<p>"${themacon.thema_cont}"</p>
 					<div class="thema_btn">
 					<input type="button" value="삭제" onclick="location='thema_del?thema_title=${themacon.thema_title}';"/>
 					</div>

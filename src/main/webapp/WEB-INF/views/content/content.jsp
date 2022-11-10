@@ -208,7 +208,7 @@
                                                 <span class="Text-Comment">${rev.review_cont}</span>
                                                 <div class="Del-comment1">
                                                    <input class="Del-Comment2" type="button" size="20"
-                                                      value="삭제" />
+                                                      value="삭제" onclick="location='review_del?review_no=${rev.review_no}';" />
                                                 </div>
                                              </div>
                                           </div>

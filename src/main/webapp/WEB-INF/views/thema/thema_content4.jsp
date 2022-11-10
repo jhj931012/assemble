@@ -38,10 +38,16 @@ var num=1;
 
 	<div class="thema-title">
 		<h1>여성유저들이 찜을 많이 한 웹툰</h1>
-		<h3>내용</h3>
+		<br/>
+		<h4>ASSEMBLE 여성유저들이 가장 많이 찜한 웹툰목록입니다.</h4>
 	</div>
 
 	<div class="content-page">
+	
+	<c:if test="${empty conlist4}">
+
+               <span class="wish-msg"><c:out value="${contmsg}" /></span>
+  </c:if>
 	
 
 <c:forEach var="themacon4" items="${conlist4}" varStatus="status">

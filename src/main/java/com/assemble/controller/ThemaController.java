@@ -36,6 +36,7 @@ public class ThemaController {
 		
 
 		contM.addAttribute("conlist", conlist);
+		contM.addAttribute("contmsg", "테마목록이 없습니다.");
 
 
 		return "thema/thema_content";
@@ -48,7 +49,7 @@ public class ThemaController {
 		
 
 		contM.addAttribute("conlist2", conlist2);
-
+		contM.addAttribute("contmsg", "테마목록이 없습니다.");
 
 		return "thema/thema_content2";
 	}
@@ -60,7 +61,7 @@ public class ThemaController {
 		
 
 		contM.addAttribute("conlist3", conlist3);
-
+		contM.addAttribute("contmsg", "테마목록이 없습니다.");
 
 		return "thema/thema_content3";
 	}
@@ -72,7 +73,7 @@ public class ThemaController {
 		
 
 		contM.addAttribute("conlist4", conlist4);
-
+		contM.addAttribute("contmsg", "테마목록이 없습니다.");
 
 		return "thema/thema_content4";
 	}
